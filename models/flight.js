@@ -18,7 +18,7 @@ const FlightSchema = new Schema({
         max: 9999,
         required: true
     },
-    departs; {
+    departure: {
         type: Date,
          default: function() {
         let date = new Date();
@@ -28,8 +28,9 @@ const FlightSchema = new Schema({
             return new Date().getFullYear();
           },    }
 }
+    booked: { type: Boolean, default: true },
 }); 
 
   
 // Compile the schema into a model and export it
-module.exports = mongoose.model('Movie', movieSchema);
+module.exports = mongoose.model('Flight', flightSchema);
