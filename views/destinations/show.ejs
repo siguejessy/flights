@@ -1,0 +1,14 @@
+<h2>Destinations</h2>
+<form id="add-destination-form" method="POST"
+  action="/flights/<%= flight._id %>/destinations">
+  <label>Destination:</label>
+  <textarea name="content"></textarea>
+  <select name="destination">
+    <option value="AUS">Austin TX, USA</option>
+    <option value="SAL">San Salvador, ES</option>
+    <option value="MEX">CDMX, MX</option>
+    <option value="CDG">Paris, FR</option>
+    <option value="PDX">Portland OR, USA</option>
+  </select>
+  <input type="submit" value="Add Destination">
+</form>
