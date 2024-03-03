@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flights 🛫</title>
-  <link rel='stylesheet' href='/public/stylesheets/style.css' />
+  <title>Flights  🛫</title>
+  <link rel='stylesheet' href='/assets/stylesheets/style.css' />
 </head>
 <body>
   <nav>
     <!-- <img src="/images/camera.svg"> -->
-    <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>ADD MOVIE</a>
-    <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>ALL MOVIES</a>
+    <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>Add a Flight</a>
+    <br>
+    <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>View All Flights</a>
   </nav>
   <main>
-  <h1><%= title %></h1>
+    <h1><%= title %></h1>

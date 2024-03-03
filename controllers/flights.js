@@ -18,20 +18,15 @@ async function show(req, res) {
   const flight = await Flight.findById(req.params.id);
   res.render('flights/show', { title: 'Flight Details', flight });
 }
-//OG Code from mongoose movie lab
-// function newFlight(req, res) {
-//   // We'll want to be able to render an  
-//   // errorMsg if the create action fails
-//   res.render('flights/new', { title: 'Add a Flight', errorMsg: '' });
-// }
 
-const newFlight = new Flight();
-// Obtain the default date
-const dt = newFlight.departs;
-// Format the date for the value attribute of the input
-let departsDate = `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, '0')}`;
-departsDate += `-${dt.getDate().toString().padStart(2, '0')}T${dt.toTimeString().slice(0, 5)}`;
-res.render('flights/new', { departsDate });
+function newFlight(req, res) {}
+  const dt = newFlight.departs;
+  // Format the date for the value attribute of the input
+  let departsDate = `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, '0')}`;
+  departsDate += `-${dt.getDate().toString().padStart(2, '0')}T${dt.toTimeString().slice(0, 5)}`;
+  res.render('flights/new', { departsDate });
+}
+  
 
 
 async function create(req, res) {
