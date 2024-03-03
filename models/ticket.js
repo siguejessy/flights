@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const ticketSchema= new Schema({
     seat: {
@@ -13,7 +13,7 @@ const ticketSchema= new Schema({
       },
     flight: {
       type: ObjectId,
-        ref: 'Flight'
+        ref: 'Flight',
     },
 } , {
   timestamps: true

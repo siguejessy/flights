@@ -24,13 +24,15 @@ Definition of done is to implement the following user stories:
 
 - AAU, when viewing the detail page for a flight, I want to view a list of the tickets that have been created for that flight
 <br>
+
 ---
+
 #### Stretch Goals
 
 __1. Code these additional User Stories:__
 
 - AAU, I want to view the list of flights by departure date in ascending order.
-	
+
 - AAU, I want the flights in the list to be displayed using red text if the flight's departure date has passed.
 
 1. Sort the list of `destinations` for a flight by the `arrival` date/time in ascending order.
@@ -41,3 +43,9 @@ __1. Code these additional User Stories:__
 4. Add a feature to delete a flight's ticket.
 
 __2. Styling!__
+
+
+```
+Known Bugs:
+Booked? Boolean - when checked, it doesn't post that it's true
+```

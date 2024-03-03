@@ -1,5 +1,32 @@
 <%- include('../partials/header') %>
 
-<h2>Home Page</h2>
+<table id="flightList">
+    <thead>
+      <tr>
+        <th>Booked?</th>
+        <th>Airline</th>
+        <th>Departs<br>From</th>
+        <th>Lands<br>At</th>
+        <th>Flight #</th>
+        <th>Departure<br>Date</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% flights.forEach(function(f) { %>
+        <tr>
+         <td><a href="/flights/<%= f.id %>"><%= f.booked %></a>
+            - <%= f.booked ? '✈️' : 'not yet' %></td>
+          <!-- <td><%= f.booked %></td> -->
+          <td><%= f.airline %></td>
+          <td><%= f.airport %></td>
+          <td><%= f.destinations %></td>
+          <td><%= f.flightNo %></td>
+          <td><%= f.departure %></td>
+          <td><a href="/flights/<%= f._id %>">VIEW</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
 
 <%- include('../partials/footer') %>
