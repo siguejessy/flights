@@ -25,10 +25,15 @@ const flightSchema = new Schema({
         date.setFullYear(date.getFullYear() + 1);
         return date;
           },
+    destinations: [destinationSchema],
     booked: { type: Boolean, default: true },
 },
-}); 
+} , {
+  timestamps: true
+});
 
-  
+
+
+
 // Compile the schema into a model and export it
 module.exports = mongoose.model('Flight', flightSchema);
