@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+    <div>Flight: </div>
+    <div><%= flight.airline %></div>
+    <div>Departure Airport: </div>
+    <div><%= flight.airport %></div>
+    <div>Flight Number: </div>
+    <div><%= flight.flightNo %></div>
+    <div>Departure Time: </div>
+    <div><%= flight.departure %></div>
+    <div>Did you book the ticket?: </div>
+    <div><%= flight.booked ? 'Yes' : 'Nope' %></div>
+  </section>
+
+  <a href="/flights/<%= flight.id %>/edit">Edit Flight Details</a>
+
+<%- include('../partials/footer') %>
