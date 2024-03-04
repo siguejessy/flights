@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-// You'll be creating this controller module next
 const flightsCtrl = require('../controllers/flights');
 	
+<<<<<<< Updated upstream
 // GET /flights
 router.get('/flights', flightsCtrl.index);
 // GET /flights/new
@@ -13,3 +13,13 @@ router.get('/flights/:id', flightsCtrl.show);
 router.post('/flights', flightsCtrl.create);
 	
 module.exports = router;
+=======
+
+router.get('/', flightsCtrl.index);
+router.get('/new', flightsCtrl.new);
+router.get('/:id', flightsCtrl.show);
+router.post('/', flightsCtrl.create);
+
+
+module.exports = router;
+>>>>>>> Stashed changes

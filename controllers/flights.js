@@ -20,11 +20,21 @@ async function show(req, res) {
 }
 
 function newFlight(req, res) {
+<<<<<<< Updated upstream
   const dt = newFlight.departs;
   // Format the date for the value attribute of the input
   let departsDate = `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, '0')}`;
   departsDate += `-${dt.getDate().toString().padStart(2, '0')}T${dt.toTimeString().slice(0, 5)}`;
   res.render('flights/new', { departsDate });
+=======
+const dt = newFlight.departure;
+const flight = Flight.findById(req.params.id);
+
+// Format the date for the value attribute of the input
+// let departsDate = `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, '0')}`;
+// departsDate += `-${dt.getDate().toString().padStart(2, '0')}T${dt.toTimeString().slice(0, 5)}`;
+res.render('flights/new', { title: 'Add a flight', errorMsg: '' });
+>>>>>>> Stashed changes
 }
   
 
@@ -40,7 +50,7 @@ async function create(req, res) {
     await Flight.create(req.body);``
     // Always redirect after CUDing data
     // We'll refactor to redirect to the flights index after we implement it
-    res.redirect('flights');  // Update this line
+    res.redirect('/flights');  // Update this line
   } catch (err) {
     // Typically some sort of validation error
     console.log(err);
