@@ -1,12 +1,15 @@
 const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
-
+<<<<<<< Updated upstream
+=======
   
 const destinationSchema = new Schema({
   airport: {
     type: String,
-    enum: ['AUS', 'SAL', 'MEX', 'CDG', 'PDX']
+    enum: ['AUS', 'SAL', 'MEX', 'CDG', 'PDX'],
+    required: true,
+    unique: true
   },
   arrival: {
     type: Date,
@@ -14,6 +17,8 @@ const destinationSchema = new Schema({
 }, {
   timestamps: true
 });
+
+>>>>>>> Stashed changes
 
 const flightSchema = new Schema({
     airline: {
@@ -38,8 +43,13 @@ const flightSchema = new Schema({
         date.setFullYear(date.getFullYear() + 1);
         return date;
           },
-          destinations: [destinationSchema],
-          booked: { type: Boolean, default: true },
+    destinations: [destinationSchema],
+<<<<<<< Updated upstream
+    booked: { type: Boolean, default: true },
+=======
+    booked: { type: Boolean, default: false},
+    tickets: [{type: Schema.Types.ObjectId, ref: 'Ticket'}],
+>>>>>>> Stashed changes
 },
 } , {
   timestamps: true

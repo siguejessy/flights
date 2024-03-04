@@ -1,5 +1,8 @@
 <%- include('../partials/header') %>
 
+<<<<<<< Updated upstream
+<h2>Home Page</h2>
+=======
 <table id="flightList">
     <thead>
       <tr>
@@ -15,9 +18,7 @@
     <tbody>
       <% flights.forEach(function(f) { %>
         <tr>
-         <td><a href="/flights/<%= f.id %>"><%= f.booked %></a>
-            - <%= f.booked ? '✈️' : 'not yet' %></td>
-          <!-- <td><%= f.booked %></td> -->
+         <td><%= f.booked ? 'Yes' : 'Nope' %></td>
           <td><%= f.airline %></td>
           <td><%= f.airport %></td>
           <td><%= f.destinations %></td>
@@ -28,5 +29,6 @@
         <% }); %>
       </tbody>
     </table>
+>>>>>>> Stashed changes
 
 <%- include('../partials/footer') %>
